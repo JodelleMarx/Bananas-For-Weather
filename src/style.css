@@ -90,3 +90,8 @@ body {
   border-color: black;
   color: black;
 }
+
+.sourceCode {
+  display: block;
+  margin: 0 auto;
+}
