@@ -1,0 +1,92 @@
+body {
+  font-family: "Roboto Slab", serif;
+  display: block;
+  text-align: center;
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+
+.box {
+  border: 3px solid rgb(255, 226, 2);
+  margin: 45px 35px;
+  padding: 10px 10px 10px 10px;
+}
+
+.title,
+.temp {
+  display: block;
+  margin: 20px auto 14px;
+  font-size: 35px;
+  font-weight: 400;
+}
+
+.dateTime {
+  margin: 15px auto 10px;
+  display: block;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.cTemp,
+.fTemp {
+  margin: 10px auto;
+}
+
+.celsius,
+.fahrenheit,
+.perpendicularLine {
+  margin: 1px 0 20px 1px;
+  font-size: 10px;
+}
+
+.myLocationBtn {
+  display: block;
+  font-size: 20px;
+  font-weight: 300;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.cityDisplay {
+  margin: 0 auto;
+  font-size: 40px;
+  font-weight: 200;
+}
+
+.bananas-on-bikes-image {
+  display: block;
+  margin: 20px auto;
+  width: 300px;
+  border-radius: 5px;
+}
+
+.card1,
+.card2,
+.card3,
+.card4,
+.card5 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 200;
+  font-size: 20px;
+  display: block;
+}
+
+.raincloud,
+.cloud,
+.sunandcloud,
+.sun {
+  width: 75px;
+  margin: 0 auto;
+}
+
+.btn {
+  background-color: #ffffff;
+  color: black;
+  border-color: black;
+}
+
+.btn:hover {
+  background-color: rgb(255, 226, 2);
+  border-color: black;
+  color: black;
+}
