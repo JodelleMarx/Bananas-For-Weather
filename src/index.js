@@ -1,52 +1,16 @@
 function showTemp(response) {
   let cityDisplay = document.querySelector("#city-display");
   cityDisplay.innerHTML = response.data.name;
+  let celsius = document.querySelector("#celsius");
+  let fahrenheit = document.querySelector("#fahrenheit");
   let sourcedTemp = Math.round(response.data.main.temp);
   let temp = document.querySelector("#temp");
   let weatherDescription = document.querySelector("#weather-description");
   temp.innerHTML = `${sourcedTemp}°C`;
+  celsius.innerHTML = `C° |`;
+  fahrenheit.innerHTML = ` F°`;
   weatherDescription.innerHTML = `Today it is ${response.data.weather[0].description}.`;
 }
-
-// function activityName (response) {
-//   let weatherIcon = response.data.weather[0].icon;
-//   if (weatherIcon === 01d)
-//   {activity = `biking to the store`}
-//   if (weatherIcon === 02d)
-//   {activity = `biking to the store`}
-//   if (weatherIcon === 03d)
-//   {activity = `taking pictures of nature`}
-//   if (weatherIcon === 04d)
-//   {activity = `taking pictures of nature`}
-//   if (weatherIcon === 09d)
-//    {activity = `reading`}
-//   if (weatherIcon === 10d)
-//    {activity = `writing a note to a friend`}
-//   if (weatherIcon === 11d)
-//    {activity = `building a blanket fort`}
-//   if (weatherIcon === 13d)
-//    {activity = `playing in the snow`}
-//   if (weatherIcon === 50d)
-//    {activity = `drinking hot chocolate`}
-//    if (weatherIcon === 01n)
-//   {activity = `learning about astrology`}
-//   if (weatherIcon === 02n)
-//   {activity = `learning about astrology`}
-//   if (weatherIcon === 03n)
-//   {activity = `playing cards`}
-//   if (weatherIcon === 04n)
-//   {activity = `reading`}
-//   if (weatherIcon === 09n)
-//    {activity = `trying a new recipe`}
-//   if (weatherIcon === 10n)
-//    {activity = `writing a note to a friend`}
-//   if (weatherIcon === 11n)
-//    {activity = `building a blanket fort`}
-//   if (weatherIcon === 13n)
-//    {activity = `drinking hot chocolate`}
-//   if (weatherIcon === 50n)
-//    {activity = `going to bed early`}
-// }
 
 function searchCityWeather(cityName) {
   let apiKey = "8f74c72399c350e75af3f25df3b5a966";
@@ -114,3 +78,12 @@ function formatDateTime(timestamp) {
   let currentDateTime = document.querySelector("#current-date-time");
   currentDateTime.innerHTML = `As of ${day}, ${month} ${date} at ${time}`;
 }
+
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let fahrenheitTemp = (14 * 9) / 5 + 32;
+  alert("link clicked");
+}
+
+let fahrenheittLink = document.querySelector("#fahrenheit");
+fahrenheittLink.addEventListener("click", displayFahrenheitTemp);
