@@ -1,11 +1,54 @@
 function showTemp(response) {
+  activityName();
   let cityDisplay = document.querySelector("#city-display");
   cityDisplay.innerHTML = response.data.name;
   let sourcedTemp = Math.round(response.data.main.temp);
   let temp = document.querySelector("#temp");
   let weatherDescription = document.querySelector("#weather-description");
   temp.innerHTML = `${sourcedTemp}°C`;
-  weatherDescription.innerHTML = response.data.weather[0].description;
+  weatherDescription.innerHTML = `Today is ${response.data.weather[0].description}, so the bananas are ${activity}.`;
+}
+
+function activityName (response) {
+  let weatherIcon = response.data.weather[0].icon;
+  if (weatherIcon === 01d)
+  {activity = `biking to the store`}
+  if (weatherIcon === 02d)
+  {activity = `biking to the store`}
+  if (weatherIcon === 03d)
+  {activity = `taking pictures of nature`}
+  if (weatherIcon === 04d)
+  {activity = `taking pictures of nature`}
+  if (weatherIcon === 09d)
+   {activity = `reading`}
+  if (weatherIcon === 10d)
+   {activity = `writing a note to a friend`}
+  if (weatherIcon === 11d)
+   {activity = `building a blanket fort`}
+  if (weatherIcon === 13d)
+   {activity = `playing in the snow`}
+  if (weatherIcon === 50d)
+   {activity = `drinking hot chocolate`}
+   if (weatherIcon === 01n)
+  {activity = `learning about astrology`}
+  if (weatherIcon === 02n)
+  {activity = `learning about astrology`}
+  if (weatherIcon === 03n)
+  {activity = `playing cards`}
+  if (weatherIcon === 04n)
+  {activity = `reading`}
+  if (weatherIcon === 09n)
+   {activity = `trying a new recipe`}
+  if (weatherIcon === 10n)
+   {activity = `writing a note to a friend`}
+  if (weatherIcon === 11n)
+   {activity = `building a blanket fort`}
+  if (weatherIcon === 13n)
+   {activity = `drinking hot chocolate`}
+  if (weatherIcon === 50n)
+   {activity = `going to bed early`}
+
+
 }
 
 function searchCityWeather(cityName) {

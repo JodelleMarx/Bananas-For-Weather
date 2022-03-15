@@ -11,7 +11,6 @@
 }
 
 .title {
-  display: block;
   margin: 20px auto 14px;
   font-size: 35px;
   font-weight: 400;
@@ -19,13 +18,10 @@
 
 .updatedOn {
   margin: 15px auto 10px;
-  display: block;
-  font-size: 20px;
   font-weight: 300;
 }
 
 .myLocationBtn {
-  display: block;
   font-size: 20px;
   font-weight: 300;
   border: none;
