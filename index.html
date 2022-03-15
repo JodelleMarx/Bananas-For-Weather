@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BananasForWeather</title>
-    <link rel="stylesheet" href="src/style.css"/>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,6 +19,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+     <link rel="stylesheet" href="src/style.css"/>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   
   </head>
@@ -56,9 +56,9 @@
   </div>
 
    
-    <img src="src/bananas-on-bikes.jpg" class="bananas-on-bikes-image" />
+    <img class="activityImage" id="activity-image" src="src/images/bananas-on-bikes.jpg" class="bananas-on-bikes-image" />
 
-    <div class="activity">The bananas are biking to the store today.</div>
+    <div class="activityDescription" id="activity-description">The bananas are biking to the store today.</div>
 
     <br />
     <br />
@@ -66,34 +66,36 @@
     <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Day</th>
+      <th scope="col"></th>
+      <th scope="col">Temperature</th>
+      <th scope="col">Precipitation</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row" id="dateTomorrow"></th>
+      <td id="dayTomorrow"></td>
+      <td id="imageTomorrow"></td>
+      <td id="tempTomorrow"></td>
     </tr>
     <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <th scope="row" id="dateToday+2"></th>
+      <td id="dayToday+2"></td>
+      <td id="imageToday+2"></td>
+      <td id="tempToday+2"></td>
     </tr>
     <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
+      <th scope="row" id="dateToday+3"></th>
+      <td id="dayToday+3"></td>
+      <td id="imageToday+3"></td>
+      <td id="tempToday+3"></td>
     </tr>
   </tbody>
 </table>
-    </div>
+    
     <div class="sourceCode" id="sourceCode"><a href="https://github.com/JodelleMarx/Bananas-On-Bikes-Weather-App.git">Open source code</a> by Jodelle Marx</div>
+  </div>
   </div>
   
     <script src="src/index.js"></script>
