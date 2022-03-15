@@ -3,9 +3,9 @@ function showTemp(response) {
   cityDisplay.innerHTML = response.data.name;
   let sourcedTemp = Math.round(response.data.main.temp);
   let temp = document.querySelector("#temp");
-  let tempDescription = document.querySelector("#temp-description");
+  let weatherDescription = document.querySelector("#weather-description");
   temp.innerHTML = `${sourcedTemp}°C`;
-  tempDescription.innerHTML = response.data.weather[0].description;
+  weatherDescription.innerHTML = response.data.weather[0].description;
 }
 
 function searchCityName(cityName) {
@@ -17,6 +17,7 @@ function searchCityName(cityName) {
 }
 
 function searchCity(event) {
+  formatDateTime();
   event.preventDefault();
   let searchInput = document.querySelector("#input-city");
   if (searchInput.value) {
@@ -31,7 +32,6 @@ function searchCity(event) {
 let searchEngine = document.querySelector("#search-engine");
 searchEngine.addEventListener("submit", searchCity);
 
-// // HW #4 making the C/F converter buttons:
 // function converToCelsius(event) {
 //   event.preventDefault();
 //   let temp = document.querySelector(`#temp`);
@@ -48,43 +48,45 @@ searchEngine.addEventListener("submit", searchCity);
 // let fahrenheit = document.querySelector(`#fahrenheit`);
 // fahrenheit.addEventListener("click", converToFahrenheit);
 
-let now = new Date();
+function formatDateTime(timestamp) {
+  let now = new Date();
 
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[now.getDay()];
 
-let months = [
-  "Jan",
-  "Feb",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
-];
-let month = months[now.getMonth()];
+  let months = [
+    "Jan",
+    "Feb",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let month = months[now.getMonth()];
 
-let date = now.getDate();
+  let date = now.getDate();
 
-let hours = now.getHours();
+  let hours = now.getHours();
 
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
+  let minutes = now.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  let currentDateTime = document.querySelector("#current-date-time");
+  currentDateTime.innerHTML = `${day}, ${month} ${date}  |  ${hours}:${minutes}`;
 }
-
-let currentDateTime = document.querySelector("#current-date-time");
-currentDateTime.innerHTML = `${day}, ${month} ${date}  |  ${hours}:${minutes}`;

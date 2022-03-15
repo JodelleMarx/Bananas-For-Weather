@@ -59,25 +59,6 @@
   border-radius: 5px;
 }
 
-.card1,
-.card2,
-.card3,
-.card4,
-.card5 {
-  font-family: "Roboto Slab", serif;
-  font-weight: 200;
-  font-size: 20px;
-  display: block;
-}
-
-.raincloud,
-.cloud,
-.sunandcloud,
-.sun {
-  width: 75px;
-  margin: 0 auto;
-}
-
 .btn {
   background-color: #ffffff;
   color: black;
