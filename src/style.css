@@ -10,31 +10,30 @@
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
 
-.title,
-.temp {
+.title {
   display: block;
   margin: 20px auto 14px;
   font-size: 35px;
   font-weight: 400;
 }
 
-.dateTime {
+.updatedOn {
   margin: 15px auto 10px;
   display: block;
   font-size: 20px;
   font-weight: 300;
 }
 
-.cTemp,
-.fTemp {
+.temp {
   margin: 10px auto;
+  font-size: 35px;
+  font-weight: 400;
 }
 
 .celsius,
-.fahrenheit,
-.perpendicularLine {
-  margin: 1px 0 20px 1px;
+.fahrenheit {
   font-size: 10px;
+  margin: 0 auto 30px 0;
 }
 
 .myLocationBtn {
