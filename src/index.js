@@ -6,10 +6,11 @@ function showTemp(response) {
   let sourcedTemp = Math.round(response.data.main.temp);
   let temp = document.querySelector("#temp");
   let weatherDescription = document.querySelector("#weather-description");
-  temp.innerHTML = `${sourcedTemp}°C`;
-  celsius.innerHTML = `C° |`;
-  fahrenheit.innerHTML = ` F°`;
-  weatherDescription.innerHTML = `Today it is ${response.data.weather[0].description}.`;
+  celsiusTemp = response.data.main.temp;
+  temp.innerHTML = ` ${sourcedTemp}°C`;
+  celsius.innerHTML = `°C |`;
+  fahrenheit.innerHTML = ` °F`;
+  weatherDescription.innerHTML = `Today's forecast: ${response.data.weather[0].description}.`;
 }
 
 function searchCityWeather(cityName) {
@@ -81,9 +82,25 @@ function formatDateTime(timestamp) {
 
 function displayFahrenheitTemp(event) {
   event.preventDefault();
-  let fahrenheitTemp = (14 * 9) / 5 + 32;
-  alert("link clicked");
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let temp = document.querySelector("#temp");
+  temp.innerHTML = ` ${Math.round(fahrenheitTemp)}°F`;
 }
 
-let fahrenheittLink = document.querySelector("#fahrenheit");
-fahrenheittLink.addEventListener("click", displayFahrenheitTemp);
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  let temp = document.querySelector("#temp");
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
+  temp.innerHTML = ` ${Math.round(celsiusTemp)}°C`;
+}
+
+let celsiusTemp = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", displayCelsiusTemp);
