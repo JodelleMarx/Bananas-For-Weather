@@ -40,18 +40,19 @@
  
   <button class:"myLocationBtn" id="my-location-button">Use my current location</button>
 </br>
-  <div class="updatedOn">Last updated <span class="dateTime" id="current-date-time">
+  <div class="updatedOn"><span class="dateTime" id="current-date-time">
   </span></div> 
   
-  <div class="cityDisplay" id="city-display"> 
-  </div>
+  <div class="cityWeather"><span class="cityDisplay" id="city-display"> 
+  </span>
   
-  <div class="fullTempDisplay" id="full-temp-display">
+  <span class="fullTempDisplay" id="full-temp-display">
     <span class="temp" id="temp"></span><span class="units" id="units"><a href="#" class="celsius" id="celsius">°C |</a>
       <a href="#" class="fahrenheit" id="fahrenheit">°F</a>
    </span>
    <div class="weatherDescrition" id="weather-description"></div>
-  </div>
+  </span>
+</div>
 
    
     <img class="activityImage" id="activity-image" src="src/images/bananas-on-bikes.jpg" class="bananas-on-bikes-image" />
@@ -67,7 +68,7 @@
       <th scope="col">Day</th>
       <th scope="col"></th>
       <th scope="col">Temperature</th>
-      <th scope="col">Precipitation</th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
@@ -76,18 +77,21 @@
       <td id="dayTomorrow"></td>
       <td id="imageTomorrow"></td>
       <td id="tempTomorrow"></td>
+      <td id="descriptionTomorrow"></td>
     </tr>
     <tr>
       <th scope="row" id="dateToday+2"></th>
       <td id="dayToday+2"></td>
       <td id="imageToday+2"></td>
       <td id="tempToday+2"></td>
+      <td id="descriptionToday+2"></td>
     </tr>
     <tr>
       <th scope="row" id="dateToday+3"></th>
       <td id="dayToday+3"></td>
       <td id="imageToday+3"></td>
       <td id="tempToday+3"></td>
+      <td id="descriptionToday+3"></td>
     </tr>
   </tbody>
 </table>

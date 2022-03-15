@@ -88,5 +88,5 @@ function formatDateTime(timestamp) {
   }
 
   let currentDateTime = document.querySelector("#current-date-time");
-  currentDateTime.innerHTML = `${day}, ${month} ${date}  |  ${hours}:${minutes}`;
+  currentDateTime.innerHTML = `As of ${day}, ${month} ${date} at ${hours}:${minutes}`;
 }
