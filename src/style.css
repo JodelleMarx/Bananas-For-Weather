@@ -24,18 +24,6 @@
   font-weight: 300;
 }
 
-.temp {
-  margin: 10px auto;
-  font-size: 35px;
-  font-weight: 400;
-}
-
-.celsius,
-.fahrenheit {
-  font-size: 10px;
-  margin: 0 auto 30px 0;
-}
-
 .myLocationBtn {
   display: block;
   font-size: 20px;
@@ -49,6 +37,16 @@
   margin: 0 auto;
   font-size: 40px;
   font-weight: 200;
+}
+.temp {
+  margin: 10px auto;
+  font-size: 35px;
+}
+
+.celsius,
+.fahrenheit {
+  font-size: 10px;
+  margin: 0 auto 30px 0;
 }
 
 .activityImage {
