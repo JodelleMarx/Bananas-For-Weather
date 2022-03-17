@@ -19,6 +19,8 @@ function showTemp(response) {
   let sourcedTemp = Math.round(response.data.main.temp);
   let temp = document.querySelector("#temp");
   let weatherDescription = document.querySelector("#weather-description");
+  let windSpeed = document.querySelector("#wind-speed");
+  let actualWindSpeed = Math.round(response.data.wind.speed);
   let icon = document.querySelector("#icon");
   let iconCode = response.data.weather[0].icon;
 
@@ -26,7 +28,8 @@ function showTemp(response) {
   temp.innerHTML = ` ${sourcedTemp}°C`;
   celsius.innerHTML = `°C |`;
   fahrenheit.innerHTML = ` °F`;
-  weatherDescription.innerHTML = `Today's forecast: ${response.data.weather[0].description}.`;
+  weatherDescription.innerHTML = `${response.data.weather[0].description} `;
+  windSpeed.innerHTML = `| Wind Speed: ${actualWindSpeed}m/s`;
   icon.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${iconCode}@2x.png`

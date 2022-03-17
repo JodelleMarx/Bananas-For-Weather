@@ -16,9 +16,16 @@
   font-weight: 400;
 }
 
-.updatedOn {
-  margin: 15px auto 10px;
-  font-weight: 300;
+.btn {
+  background-color: #ffffff;
+  color: black;
+  border-color: black;
+}
+
+.btn:hover {
+  background-color: rgb(255, 226, 2);
+  border-color: black;
+  color: black;
 }
 
 .myLocationBtn {
@@ -29,8 +36,14 @@
   background: transparent;
 }
 
+.updatedOn {
+  margin: 15px auto 10px;
+  font-weight: 300;
+}
+
 .cityDisplay {
   margin: 0 auto;
+  margin-right: 5px;
   font-size: 40px;
   font-weight: 200;
 }
@@ -41,6 +54,10 @@
 
 .units {
   font-size: 10px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 18px;
+  margin-left: 5px;
 }
 
 .units .active {
@@ -54,22 +71,14 @@
   color: blue;
 }
 
+.icon {
+  margin-top: 10px;
+}
+
 .activityImage {
   display: block;
   margin: 20px auto;
   width: 300px;
-}
-
-.btn {
-  background-color: #ffffff;
-  color: black;
-  border-color: black;
-}
-
-.btn:hover {
-  background-color: rgb(255, 226, 2);
-  border-color: black;
-  color: black;
 }
 
 .sourceCode {
