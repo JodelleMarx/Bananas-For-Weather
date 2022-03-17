@@ -44,6 +44,18 @@ function searchCityWeather(cityName) {
     .then(showTemp);
 }
 
+// function showPosition(position) {
+//   let cityDisplay = document.querySelector("cityDisplay");
+//   cityDisplay.innerHTML = `Your Latitude is ${position.coords.latitude} and your longitude is ${position.coords.longitude}.`;
+// }
+
+// function getCurrentLocation() {
+//   navigator.geolocation.getCurrentPosition(showPosition);
+// }
+
+// let myLocationBtn = document.querySelector("button");
+// GamepadButton.addEventListener("click", getCurrentPosition);
+
 function formatDateTime(timestamp) {
   let now = new Date();
   let days = [
