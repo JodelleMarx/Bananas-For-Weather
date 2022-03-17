@@ -89,7 +89,9 @@ function formatDateTime(timestamp) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  if (hours >= 12) {
+  if (hours === 12) {
+    time = `${hours}:${minutes}pm`;
+  } else if (hours > 12) {
     time = `${hours - 12}:${minutes}pm`;
   } else {
     time = `${hours}:${minutes}am`;
