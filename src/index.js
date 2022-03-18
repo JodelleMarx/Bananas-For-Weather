@@ -118,6 +118,33 @@ function displayCelsiusTemp(event) {
   temp.innerHTML = ` ${Math.round(celsiusTemp)}°C`;
 }
 
+function dispalyForecast() {
+  let forecast = document.querySelector("#weather-forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+        <div class="weatherForecastDate">${day}</div>
+        <img 
+        src="http://openweathermap.org/img/wn/01d@2x.png" 
+        alt="" 
+        width="42"
+      />
+      <div class="weatherForecastTemp">
+        <span class="weatherForecastTempMax">20°</span>
+        <span class="weatherForecastTempMin">16°</span>
+      </div>
+      </div>
+      `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecast.innerHTML = forecastHTML;
+}
+
 let searchEngine = document.querySelector("#search-engine");
 searchEngine.addEventListener("submit", searchCity);
 
@@ -128,3 +155,5 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
+
+dispalyForecast();
