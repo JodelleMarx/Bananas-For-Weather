@@ -81,6 +81,25 @@
   width: 300px;
 }
 
+.weatherForecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.weatherForecastDate {
+  font-size: 16px;
+  color: black;
+  opacity: 0.5;
+}
+
+.weatherForecastTemp {
+  font-size: 13px;
+}
+
+.weatherForecastTempMin {
+  opacity: 0.5;
+}
+
 .sourceCode {
   display: block;
   margin: 0 auto;
