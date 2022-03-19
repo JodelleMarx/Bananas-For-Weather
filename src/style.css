@@ -28,14 +28,6 @@
   color: black;
 }
 
-/* .myLocationBtn {
-  font-size: 20px;
-  font-weight: 300;
-  border: none;
-  box-shadow: none;
-  background: transparent;
-} */
-
 .updatedOn {
   margin: 15px auto 10px;
   font-weight: 300;
@@ -58,12 +50,12 @@
 
 .activityImage {
   display: block;
-  margin: 20px auto;
+  margin: 20px auto 0px;
   width: 300px;
 }
 
 .weatherForecast {
-  margin-top: 20px;
+  margin: 0 auto 60px;
   text-align: center;
 }
 
