@@ -2,7 +2,7 @@
   max-width: 800px;
   border: 3px solid rgb(255, 226, 2);
   border-radius: 5px;
-  margin: 35px auto;
+  margin: 35px auto 0;
   padding: 10px;
   font-family: "Roboto Slab", serif;
   display: block;
@@ -52,25 +52,6 @@
   font-size: 35px;
 }
 
-.units {
-  font-size: 10px;
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 18px;
-  margin-left: 5px;
-}
-
-.units .active {
-  color: black;
-  cursor: default;
-  font-weight: 400;
-}
-
-.units:hover {
-  text-decoration: none;
-  color: blue;
-}
-
 .icon {
   margin-top: 10px;
 }
@@ -102,5 +83,6 @@
 
 .sourceCode {
   display: block;
-  margin: 0 auto;
+  margin: 5px auto 30px;
+  text-align: center;
 }
